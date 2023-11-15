@@ -83,7 +83,7 @@ You can use these to mention a user in notes too!
 """
 
 
-@Bot.on_message(filters.command("start") & filters.incoming)  # type: ignore
+@Bot.on_message(filters.command("ssstart") & filters.incoming)  # type: ignore
 @is_banned
 async def start_handler(_: Bot, msg: types.Message):
     await msg.reply(
@@ -102,7 +102,7 @@ async def start_handler(_: Bot, msg: types.Message):
     )
 
 
-@Bot.on_callback_query(filters.regex("help"))  # type: ignore
+@Bot.on_callback_query(filters.regex("hhhelp"))  # type: ignore
 async def help_handler_query(_: Bot, query: types.CallbackQuery):
     await query.answer()
     await query.edit_message_text(
