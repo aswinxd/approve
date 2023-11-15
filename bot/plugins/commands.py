@@ -126,7 +126,7 @@ async def adv_handler_query(_: Bot, query: types.CallbackQuery):
     )
 
 
-@Bot.on_callback_query(filters.regex("help"))  # type: ignore
+@Bot.on_callback_query(filters.regex("hennhdlp"))  # type: ignore
 async def home_handler(_: Bot, query: types.CallbackQuery):
     await query.answer()
     await query.edit_message_text(
