@@ -94,13 +94,13 @@ async def escape_mentions_using_curly_brackets_wl(
     return teks
 
 
-@Client.on_message(filters.command(["setwelcome", "setgoodbye"]))
+@Client.on_message(filters.command(["setibwelcome", "setibgoodbye"]))
 @groupsOnly
 async def save_greetings(_, m: types.Message):
 
     db_settings = await getSettings(m.chat.id)
 
-    settings = {"/setwelcome": "welcome_settings", "/setgoodbye": "goodbye_settings"}
+    settings = {"/setibwelcome": "welcome_settings", "/setibgoodbye": "goodbye_settings"}
     command = m.text.split()[0].lower()
     req_settings = db_settings[settings[command]]
 
@@ -144,7 +144,7 @@ async def save_greetings(_, m: types.Message):
     await m.reply_text("Saved settings!")
 
 
-@Client.on_message(filters.command(["resetgoodbye", "resetwelcome"]))
+@Client.on_message(filters.command(["resetibgoodbye", "resetibwelcome"]))
 @groupsOnly
 @adminOnly(True)
 async def reset_greetings(_, m: types.Message):
@@ -241,12 +241,12 @@ async def member_has_joined(bot: Client, update: types.ChatMemberUpdated):
         return
 
 
-@Client.on_message(filters.command(["welcome", "goodbye"]))
+@Client.on_message(filters.command(["ibwelcome", "ibgoodbye"]))
 @groupsOnly
 @adminOnly(True)
 async def enable_greets(bot: Client, m: types.Message):
     db_settings = await getSettings(m.chat.id)
-    settings = {"/welcome": "welcome_settings", "/goodbye": "goodbye_settings"}
+    settings = {"/ibwelcome": "welcome_settings", "/ibgoodbye": "goodbye_settings"}
     command = m.text.split()[0].lower()
     req_settings = db_settings[settings[command]]
 
