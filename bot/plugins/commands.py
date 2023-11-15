@@ -19,10 +19,10 @@ HELP_TEXT = """
 >> /send - __To send messages to connected chats together.__
 
 **Commands For Groups**
->> /welcome <on / off> -  __To set welcome message on / off__
->> /setwelcome [as reply to message]- __To set up a new welcome message [check advanced usage to know about formatting]__
->> /goodbye <on / off> - __To set goodbye message on / off__
->> /setgoodbye [as reply to message] - __To set a goodbye message when a user leaves the group [check advanced usage to know about formatting].__
+>> /ibwelcome <on / off> -  __To set welcome message on / off__
+>> /setibwelcome [as reply to message]- __To set up a new welcome message [check advanced usage to know about formatting]__
+>> /ibgoodbye <on / off> - __To set goodbye message on / off__
+>> /setibgoodbye [as reply to message] - __To set a goodbye message when a user leaves the group [check advanced usage to know about formatting].__
 
 **Auto-Accept Settings**
 1. First you have to connect the desired channel / group using /connect.
