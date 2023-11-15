@@ -84,7 +84,7 @@ async def start_handler(_: Bot, msg: types.Message):
         reply_markup=types.InlineKeyboardMarkup(
             [
                 [
-                    types.InlineKeyboardButton("🔖 Help", callback_data=f"help"),
+                    types.InlineKeyboardButton("🔖 Help", callback_data=f"help_back"),
                     types.InlineKeyboardButton(
                         "🔗 Support", url=Config.SUPPORT_CHAT_URL
                     ),
@@ -134,7 +134,7 @@ async def home_handler(_: Bot, query: types.CallbackQuery):
         reply_markup=types.InlineKeyboardMarkup(
             [
                 [
-                    types.InlineKeyboardButton("🔖 Help", callback_data=f"fallen_back"),
+                    types.InlineKeyboardButton("🔖 Help", callback_data=f"help_back"),
                     types.InlineKeyboardButton(
                         "🔗 Support", url=Config.SUPPORT_CHAT_URL
                     ),
