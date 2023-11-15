@@ -84,9 +84,9 @@ async def sendMessage(update: types.ChatJoinRequest):
     else:
         teks = tek
     teks += "\n\n**Thanks for using our bot**",
-    reply_markup=types.InlineKeyboardMarkup(
-            [
-                [
+     reply_markup=types.InlineKeyboardMarkup(
+              [
+                  [
                     types.InlineKeyboardButton("◀️ Back", callback_data="fallen_back"),
                     types.InlineKeyboardButton("📘 Advanced Help", "advHelp"),
                 ]
