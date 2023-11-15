@@ -12,17 +12,9 @@ restart the bot /start
 HELP_TEXT = """
 **Available Commands and Explanation**
 
->> /start - __To See info about the bot__
->> /help - __To see this message.__
 >> /Pconnect - __To connect a channel / group for further settings.__
 >> /chats - __Lists the available connected chats.__
 >> /send - __To send messages to connected chats together.__
-
-**Commands For Groups**
->> /ibwelcome <on / off> -  __To set welcome message on / off__
->> /setibwelcome [as reply to message]- __To set up a new welcome message [check advanced usage to know about formatting]__
->> /ibgoodbye <on / off> - __To set goodbye message on / off__
->> /setibgoodbye [as reply to message] - __To set a goodbye message when a user leaves the group [check advanced usage to know about formatting].__
 
 **Auto-Accept Settings**
 1. First you have to connect the desired channel / group using /connect.
