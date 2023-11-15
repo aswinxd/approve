@@ -102,7 +102,7 @@ async def start_handler(_: Bot, msg: types.Message):
     )
 
 
-@Bot.on_callback_query(filters.regex("hhhelp"))  # type: ignore
+@Bot.on_callback_query(filters.regex("bothelp"))  # type: ignore
 async def help_handler_query(_: Bot, query: types.CallbackQuery):
     await query.answer()
     await query.edit_message_text(
@@ -125,7 +125,7 @@ async def adv_handler_query(_: Bot, query: types.CallbackQuery):
         reply_markup=types.InlineKeyboardMarkup(
             [
                 [
-                    types.InlineKeyboardButton("◀️ Back", callback_data="help"),
+                    types.InlineKeyboardButton("◀️ Back", callback_data="fallen_back"),
                 ]
             ]
         ),
@@ -141,7 +141,7 @@ async def home_handler(_: Bot, query: types.CallbackQuery):
         reply_markup=types.InlineKeyboardMarkup(
             [
                 [
-                    types.InlineKeyboardButton("🔖 Help", callback_data=f"help"),
+                    types.InlineKeyboardButton("🔖 Help", callback_data=f"fallen_back"),
                     types.InlineKeyboardButton(
                         "🔗 Support", url=Config.SUPPORT_CHAT_URL
                     ),
@@ -152,7 +152,7 @@ async def home_handler(_: Bot, query: types.CallbackQuery):
     )
 
 
-@Bot.on_message(filters.command("help") & filters.incoming)  # type: ignore
+@Bot.on_message(filters.command("help619") & filters.incoming)  # type: ignore
 @is_banned
 async def help_handler(_: Bot, msg: types.Message):
     await msg.reply(
