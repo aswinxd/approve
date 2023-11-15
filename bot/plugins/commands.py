@@ -6,14 +6,7 @@ from ..config import Config
 from ..utils.decorators import is_banned
 
 START_TEXT = """Hey {mention} 👋
-Iam A Feature-filled Channel / Group Management Bot
-I can do multiple tasks for you which includes;
-
-1. Auto Accepting chat-join requests __[ with customized welcome message and delay]__
-2. Auto-Deleting messages after specified intervals __[ with custom filters for media and text]__
-3. Channel-Broadcasting and may more... __[sending messages to connected chats at a time.]__
-
-Use /help to explore all the functions!
+restart the bot /start 
 """
 
 HELP_TEXT = """
@@ -21,7 +14,7 @@ HELP_TEXT = """
 
 >> /start - __To See info about the bot__
 >> /help - __To see this message.__
->> /connect - __To connect a channel / group for further settings.__
+>> /Pconnect - __To connect a channel / group for further settings.__
 >> /chats - __Lists the available connected chats.__
 >> /send - __To send messages to connected chats together.__
 
