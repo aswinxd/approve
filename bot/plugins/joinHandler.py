@@ -1,6 +1,6 @@
 from datetime import datetime, timedelta
 
-from pyrogram import enums, filters, types
+from pyrogram import types, enums
 
 from bot import Bot, bot
 import random
@@ -83,15 +83,7 @@ async def sendMessage(update: types.ChatJoinRequest):
         teks = random.choice(filter_reply)
     else:
         teks = tek
-    teks += "\n\n**Thanks for using our bot**",
-     reply_markup=types.InlineKeyboardMarkup(
-              [
-                  [
-                    types.InlineKeyboardButton("◀️ Back", callback_data="fallen_back"),
-                    types.InlineKeyboardButton("📘 Advanced Help", "advHelp"),
-                ]
-            ]
-        ),
+    teks += "\n\n**Send /start to know more**"
     try:
         if settings["var"]["type"] == "text":
             await bot.send_message(
@@ -148,3 +140,4 @@ async def handleRequests(bot: Bot, req: types.ChatJoinRequest):
             )
         except Exception as e:
             log.exception(e)
+            
