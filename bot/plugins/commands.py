@@ -68,7 +68,7 @@ You can use these to mention a user in notes too!
 """
 
 
-@Bot.on_message(filters.command("ssstart") & filters.incoming)  # type: ignore
+@Bot.on_message(filters.command("start") & filters.incoming)  # type: ignore
 @is_banned
 async def start_handler(_: Bot, msg: types.Message):
     await msg.reply(
@@ -76,7 +76,7 @@ async def start_handler(_: Bot, msg: types.Message):
         reply_markup=types.InlineKeyboardMarkup(
             [
                 [
-                    types.InlineKeyboardButton("🔖 Help", callback_data=f"fallen_"),
+                    types.InlineKeyboardButton("🔖 Help", callback_data=f"back"),
                     types.InlineKeyboardButton(
                         "🔗 Support", url=Config.SUPPORT_CHAT_URL
                     ),
@@ -87,7 +87,7 @@ async def start_handler(_: Bot, msg: types.Message):
     )
 
 
-@Bot.on_callback_query(filters.regex("bothelp"))  # type: ignore
+@Bot.on_callback_query(filters.regex("help"))  # type: ignore
 async def help_handler_query(_: Bot, query: types.CallbackQuery):
     await query.answer()
     await query.edit_message_text(
@@ -95,7 +95,7 @@ async def help_handler_query(_: Bot, query: types.CallbackQuery):
         reply_markup=types.InlineKeyboardMarkup(
             [
                 [
-                    types.InlineKeyboardButton("◀️ Back", callback_data="fallen_back"),
+                    types.InlineKeyboardButton("◀️ Back", callback_data="back"),
                     types.InlineKeyboardButton("📘 Advanced Help", "advHelp"),
                 ]
             ]
@@ -110,7 +110,7 @@ async def adv_handler_query(_: Bot, query: types.CallbackQuery):
         reply_markup=types.InlineKeyboardMarkup(
             [
                 [
-                    types.InlineKeyboardButton("◀️ Back", callback_data="fallen_"),
+                    types.InlineKeyboardButton("◀️ Back", callback_data="back"),
                 ]
             ]
         ),
@@ -118,7 +118,7 @@ async def adv_handler_query(_: Bot, query: types.CallbackQuery):
     )
 
 
-@Bot.on_callback_query(filters.regex("hennhdlp"))  # type: ignore
+@Bot.on_callback_query(filters.regex("help"))  # type: ignore
 async def home_handler(_: Bot, query: types.CallbackQuery):
     await query.answer()
     await query.edit_message_text(
@@ -126,7 +126,7 @@ async def home_handler(_: Bot, query: types.CallbackQuery):
         reply_markup=types.InlineKeyboardMarkup(
             [
                 [
-                    types.InlineKeyboardButton("🔖 Help", callback_data=f"fallen_"),
+                    types.InlineKeyboardButton("🔖 Help", callback_data=f"help"),
                     types.InlineKeyboardButton(
                         "🔗 Support", url=Config.SUPPORT_CHAT_URL
                     ),
@@ -137,7 +137,7 @@ async def home_handler(_: Bot, query: types.CallbackQuery):
     )
 
 
-@Bot.on_message(filters.command("help619") & filters.incoming)  # type: ignore
+@Bot.on_message(filters.command("help") & filters.incoming)  # type: ignore
 @is_banned
 async def help_handler(_: Bot, msg: types.Message):
     await msg.reply(
