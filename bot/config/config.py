@@ -8,8 +8,8 @@ class Config:
   BOT_TOKEN = os.environ.get("BOT_TOKEN", "6842337509:AAG0yCNk36nq1Faqh-48m3Gl5RIbm6252q8")
   BOT_NAME = os.environ.get("BOT_NAME", "Aleena")
 
-  API_ID = int(os.environ.get("API_ID", "15851949"))
-  API_HASH = os.environ.get("API_HASH", "f9e386978bf103c4a6baab0a4b92e822")
+  API_ID = int(os.environ.get("API_ID", "25618507"))
+  API_HASH = os.environ.get("API_HASH", "b8b91983b578360ec05a7e88e17b06ea")
 
   DATABASE_URI = os.environ.get("DATABASE_URI", "mongodb+srv://bot:bot@cluster0.8vepzds.mongodb.net/?retryWrites=true&w=majority")
   SESSION_NAME = os.environ.get("DATABASE_NAME", "Aleena")
